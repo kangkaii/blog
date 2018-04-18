@@ -1,0 +1,1 @@
+package com.k.blog.enums;public enum UserSexEnum {    MAN, WOMAN}

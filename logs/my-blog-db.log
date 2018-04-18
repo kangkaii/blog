@@ -1,0 +1,11 @@
+2018-04-17 18:25:32.473 [main] INFO  com.k.blog.BlogApplication - Starting BlogApplication on PC-20180402BDCE with PID 7388 (D:\IdeaProjects\blog\out\production\classes started by kangkai in D:\IdeaProjects\blog)
+2018-04-17 18:25:32.478 [main] INFO  com.k.blog.BlogApplication - The following profiles are active: dev
+2018-04-17 18:25:34.598 [main] INFO  com.k.blog.BlogApplication - Started BlogApplication in 2.776 seconds (JVM running for 3.763)
+2018-04-17 18:26:43.183 [main] INFO  com.k.blog.BlogApplication - Starting BlogApplication on PC-20180402BDCE with PID 772 (D:\IdeaProjects\blog\out\production\classes started by kangkai in D:\IdeaProjects\blog)
+2018-04-17 18:26:43.188 [main] INFO  com.k.blog.BlogApplication - The following profiles are active: dev
+2018-04-17 18:26:45.249 [main] INFO  com.k.blog.BlogApplication - Started BlogApplication in 2.754 seconds (JVM running for 3.619)
+2018-04-17 18:27:24.103 [main] INFO  com.k.blog.BlogApplication - Starting BlogApplication on PC-20180402BDCE with PID 8512 (D:\IdeaProjects\blog\out\production\classes started by kangkai in D:\IdeaProjects\blog)
+2018-04-17 18:27:24.108 [main] INFO  com.k.blog.BlogApplication - The following profiles are active: dev
+2018-04-17 18:27:26.173 [main] INFO  com.k.blog.BlogApplication - Started BlogApplication in 2.688 seconds (JVM running for 3.536)
+2018-04-17 18:27:31.180 [http-nio-9090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - springtbootDataSource - Starting...
+2018-04-17 18:27:31.289 [http-nio-9090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - springtbootDataSource - Start completed.
