@@ -21,8 +21,6 @@ server:
 ##        ResultSet: DEBUG
 
 
-
-
 #数据库
 spring:
   datasource:
@@ -31,28 +29,7 @@ spring:
     username: root
     password: kangkai
     driver-class-name: com.mysql.cj.jdbc.Driver
-#jpa配置
-#  jpa:
-#    database: MYSQL
-#    show-sql: true
-#    hibernate:
-#      ddl-auto: none
-#      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.MySQL5Dialect
 
-#swagger: #swagger相关配置
-#  groupName:
-#  title: springboot项目
-#  description: springboot项目熟悉相关配置
-#  termsOfServiceUrl:
-#  version:
-#
-#  paths: /test/.*,/api/product/.*,/api/subcategory/.*,/api/subjectrisk/.*,/api/pageblock/.*,/api/ruleFactor/.*,/api/premiumRule.*,/boot/.*,/categories/.*,/tags/.*,/entries/.*
-#  basePackages: com.example.demo
-#  license:  kangkai
-#  #licenseUrl:
 
 #mybatis: #mybatis相关配置
 mybatis:
@@ -62,18 +39,3 @@ mybatis:
         map-underscore-to-camel-case: true
         default-fetch-size: 100
         default-statement-timeout: 30
-
-#日志配置
-#logging:
-#  path: F:\logging
-#  level:
-#    root: INFO
-##    org:
-##      hibernate:
-##        sql: INFO
-#    druid:
-#      sql:
-#        DataSource: DEBUG
-#        Connection: DEBUG
-#        Statement: DEBUG
-#        # ResultSet: DEBUG
