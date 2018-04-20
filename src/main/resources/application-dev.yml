@@ -21,14 +21,23 @@ server:
 ##        ResultSet: DEBUG
 
 
-#数据库
+
 spring:
+  #数据库
   datasource:
     name: springtbootDataSource
     url: jdbc:mysql://localhost:3306/test-springboot?characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT
     username: root
     password: kangkai
     driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    content-type: text/html
+    mode: HTML5
+    cache: false
 
 
 #mybatis: #mybatis相关配置

@@ -26,7 +26,7 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	compile("org.springframework.boot:spring-boot-starter-web:2.0.1.RELEASE")
     compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
@@ -41,6 +41,21 @@ dependencies {
 
 	//分页 mybatis提供
 	compile group: 'com.github.pagehelper', name: 'pagehelper', version: '5.1.2'
+
+	// https://mvnrepository.com/artifact/com.alibaba/druid
+	compile group: 'com.alibaba', name: 'druid', version: '1.1.9'
+
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+
+	// https://mvnrepository.com/artifact/com.atlassian.commonmark/commonmark 处理markdown格式
+	compile group: 'com.atlassian.commonmark', name: 'commonmark', version: '0.11.0'
+	// https://mvnrepository.com/artifact/com.atlassian.commonmark/commonmark-ext-gfm-tables
+	compile group: 'com.atlassian.commonmark', name: 'commonmark-ext-gfm-tables', version: '0.11.0'
+	//	<!--过滤emoji字符-->
+	// https://mvnrepository.com/artifact/com.vdurmont/emoji-java
+	compile group: 'com.vdurmont', name: 'emoji-java', version: '4.0.0'
+
 
 
 	//compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '2.0.0.RELEASE'
