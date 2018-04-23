@@ -1,0 +1,1 @@
+package com.k.blog.service;import com.k.blog.model.vo.UserVo;/** * @author kangkai on 2018/4/20. */public interface UserService {    /**    * Description:用户登录接口     * 登录失败 直接抛出异常     * 登录成功 返回user实体    * @param username    * @return password    */    UserVo login(String username, String password);}

@@ -426,4 +426,19 @@ public class TaleUtils {
         File file = new File("");
         return file.getAbsolutePath() + "/";
     }
+
+    /**
+     * 根据传入的字符串 通过截取整个字符串 获取其后面的字符串
+     */
+    public static String getPart(String target,String condition) {
+        if (StringUtils.isBlank(target) || StringUtils.isBlank(condition)) {
+            throw new RuntimeException("传入字符串为空");
+        }
+        if (-1 == target.indexOf(condition)) {
+            throw new RuntimeException("目标字符串中不含有"+condition);
+        }
+        int index = target.indexOf(condition);
+        String result = target.substring(index+condition.length());
+        return result;
+    }
 }

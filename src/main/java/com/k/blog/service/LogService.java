@@ -1,0 +1,1 @@
+package com.k.blog.service;import java.util.Date;/** * @author kangkai on 2018/4/23. */public interface LogService {    void insertLog(String action,String data,Integer authorId,String ip);    // read log}

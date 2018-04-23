@@ -1,0 +1,1 @@
+package com.k.blog.enums;public enum UserAction {    LOGIN("用户登录");    private String action;    public String getAction() {        return action;    }    public void setAction(String action) {        this.action = action;    }    UserAction(String action) {        this.action = action;    }}
