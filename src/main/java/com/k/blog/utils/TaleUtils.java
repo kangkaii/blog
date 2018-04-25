@@ -428,8 +428,11 @@ public class TaleUtils {
     }
 
     /**
-     * 根据传入的字符串 通过截取整个字符串 获取其后面的字符串
-     */
+    * Description:
+    * @param target 目标字符串
+    * @param condition 部分字符串
+    * @return 截取后剩下的部分
+    */
     public static String getPart(String target,String condition) {
         if (StringUtils.isBlank(target) || StringUtils.isBlank(condition)) {
             throw new RuntimeException("传入字符串为空");

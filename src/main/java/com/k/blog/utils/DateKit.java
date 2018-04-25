@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.*;
 
 /**
@@ -667,6 +668,12 @@ public class DateKit {
         tomorrow.set(12, 0);
         tomorrow.set(13, 0);
         return Long.valueOf(String.valueOf(tomorrow.getTimeInMillis()).substring(0, 10));
+    }
+
+    public static int getSecondByInstant() {
+        Instant instant = Instant.now();
+        int second = (int)instant.getEpochSecond();
+        return second;
     }
 
 }
