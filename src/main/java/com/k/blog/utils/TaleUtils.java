@@ -3,7 +3,7 @@ package com.k.blog.utils;
 import com.k.blog.constant.WebConst;
 import com.k.blog.exception.TipException;
 import com.k.blog.model.vo.UserVo;
-import com.k.blog.web.AttachController;
+import com.k.blog.web.admin.AttachController;
 import org.apache.commons.lang3.StringUtils;
 import org.commonmark.Extension;
 import org.commonmark.ext.gfm.tables.TablesExtension;

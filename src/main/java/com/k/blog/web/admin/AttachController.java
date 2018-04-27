@@ -1,6 +1,7 @@
-package com.k.blog.web;
+package com.k.blog.web.admin;
 
 import com.k.blog.utils.TaleUtils;
+import com.k.blog.web.BaseController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

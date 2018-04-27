@@ -34,6 +34,6 @@ public class BlogApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BlogApplication.class, args);
-		logger.debug("server starting success");
+		logger.debug("ow yes !  server starting success ~");
 	}
 }

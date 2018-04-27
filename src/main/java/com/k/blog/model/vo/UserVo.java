@@ -56,85 +56,112 @@ public class UserVo implements Serializable {
      */
     private String groupName;
 
-    private static final long serialVersionUID = 1L;
+    private static UserVo userVo = new UserVo();
+
+    public UserVo() {}
+
+    public UserVo(Integer uid, String screenName,String email) {
+        this.uid = uid;
+        this.screenName = screenName;
+        this.email = email;
+    }
 
     public Integer getUid() {
         return uid;
     }
 
-    public void setUid(Integer uid) {
+    public UserVo setUid(Integer uid) {
         this.uid = uid;
+        return this;
     }
 
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public UserVo setUsername(String username) {
         this.username = username;
+        return this;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public UserVo setPassword(String password) {
         this.password = password;
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public UserVo setEmail(String email) {
         this.email = email;
+        return this;
     }
 
     public String getHomeUrl() {
         return homeUrl;
     }
 
-    public void setHomeUrl(String homeUrl) {
+    public UserVo setHomeUrl(String homeUrl) {
         this.homeUrl = homeUrl;
+        return this;
     }
 
     public String getScreenName() {
         return screenName;
     }
 
-    public void setScreenName(String screenName) {
+    public UserVo setScreenName(String screenName) {
         this.screenName = screenName;
+        return this;
     }
 
     public Integer getCreated() {
         return created;
     }
 
-    public void setCreated(Integer created) {
+    public UserVo setCreated(Integer created) {
         this.created = created;
+        return this;
     }
 
     public Integer getActivated() {
         return activated;
     }
 
-    public void setActivated(Integer activated) {
+    public UserVo setActivated(Integer activated) {
         this.activated = activated;
+        return this;
     }
 
     public Integer getLogged() {
         return logged;
     }
 
-    public void setLogged(Integer logged) {
+    public UserVo setLogged(Integer logged) {
         this.logged = logged;
+        return this;
     }
 
     public String getGroupName() {
         return groupName;
     }
 
-    public void setGroupName(String groupName) {
+    public UserVo setGroupName(String groupName) {
         this.groupName = groupName;
+        return this;
+    }
+
+    public UserVo getUserVo() {
+        return userVo;
+    }
+
+    public UserVo setUserVo(UserVo userVo) {
+        this.userVo = userVo;
+        return this;
     }
 }
