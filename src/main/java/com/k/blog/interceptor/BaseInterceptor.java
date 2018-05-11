@@ -41,14 +41,8 @@ public class BaseInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
         String uri = request.getRequestURI();
-
         LOGGE.info("UserAgent: {}", request.getHeader(USER_AGENT));
         LOGGE.info("用户访问地址: {}, 来路地址: {}", uri, IPKit.getIpAddrByRequest(request));
-        /*if (uri.indexOf(".")!=-1) {
-            return true;
-        }*/
-
-
         //请求拦截处理
         UserVo user = TaleUtils.getLoginUser(request);
         if (null == user) {
@@ -59,11 +53,11 @@ public class BaseInterceptor implements HandlerInterceptor {
                 request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, user);
             }
         }
-
         if (uri.startsWith("/admin") && !uri.startsWith("/admin/login") && null == user) {
             response.sendRedirect(request.getContextPath() + "/admin/login");
             return true;
         }
+
         //设置get请求的token
         if (request.getMethod().equals("GET")) {
             String csrf_token = UUID.UU64();
