@@ -1,10 +1,10 @@
 package com.k.blog.interceptor;
 
-import com.k.blog.model.vo.OptionVo;
+import com.k.blog.constant.WebConst;
+import com.k.blog.enums.Types;
 import com.k.blog.model.vo.UserVo;
-import com.k.blog.utils.Commons;
-import com.k.blog.utils.MapCache;
-import com.k.blog.utils.TaleUtils;
+import com.k.blog.service.UserService;
+import com.k.blog.utils.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -24,9 +24,9 @@ public class BaseInterceptor implements HandlerInterceptor {
     private static final Logger LOGGE = LoggerFactory.getLogger(BaseInterceptor.class);
     private static final String USER_AGENT = "user-agent";
 
-   /* @Resource
-    private IUserService userService;
-
+    @Resource
+    private UserService userService;
+/*
     @Resource
     private IOptionService optionService;*/
 
@@ -38,12 +38,15 @@ public class BaseInterceptor implements HandlerInterceptor {
   /*  @Resource
     private AdminCommons adminCommons;
 */
-   /* @Override
+    @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
         String uri = request.getRequestURI();
 
         LOGGE.info("UserAgent: {}", request.getHeader(USER_AGENT));
         LOGGE.info("用户访问地址: {}, 来路地址: {}", uri, IPKit.getIpAddrByRequest(request));
+        /*if (uri.indexOf(".")!=-1) {
+            return true;
+        }*/
 
 
         //请求拦截处理
@@ -56,9 +59,10 @@ public class BaseInterceptor implements HandlerInterceptor {
                 request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, user);
             }
         }
+
         if (uri.startsWith("/admin") && !uri.startsWith("/admin/login") && null == user) {
             response.sendRedirect(request.getContextPath() + "/admin/login");
-            return false;
+            return true;
         }
         //设置get请求的token
         if (request.getMethod().equals("GET")) {
@@ -68,7 +72,7 @@ public class BaseInterceptor implements HandlerInterceptor {
             request.setAttribute("_csrf_token", csrf_token);
         }
         return true;
-    }*/
+    }
 
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
