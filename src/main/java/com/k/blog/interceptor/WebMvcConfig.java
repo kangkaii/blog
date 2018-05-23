@@ -21,7 +21,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
     private BaseInterceptor baseInterceptor;
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(baseInterceptor);
+        registry.addInterceptor(baseInterceptor)
+                //告知拦截器：/static/admin/** 与 /static/user/** 不需要拦截 （配置的是 路径）
+                .excludePathPatterns("/static/admin/**", "/static/user/**");
     }
 
     /**
