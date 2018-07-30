@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>404（找不到页面）- My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="shortcut icon" th:href="@{/static/admin/images/favicon.png}"/>
+    <link th:href="@{//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/static/admin/css/style.min.css}" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"/>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"/>
+    <![endif]-->
+
+    <script th:src="@{/static/admin/js/ckeditor.js}"></script>
+    <!--<script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/classic/ckeditor.js"></script>-->
+</head>
+<body>
+<h1>Spring Boot - Upload Status</h1>
+<div th:if="${message}">
+    <h2 th:text="${message}"/>
+</div>
+
+
+
+<div class="wrapper-page">
+    <h1>Classic editor</h1>
+    <div id="toolbar-container" style="width:500px"></div>
+    <div id="editor" style="width:500px">
+        <p>This is the initial editor content.</p>
+    </div>
+    <script>
+        DecoupledEditor
+            .create( document.querySelector( '#editor' ), {
+                ckfinder: {
+                    uploadUrl: '/richText/uploadImg?command=QuickUpload&type=Files'
+                }
+            }  )
+            .then( editor => {
+                const toolbarContainer = document.querySelector( '#toolbar-container' );
+                toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+            } )
+            .catch( error => {
+            console.error( error );
+            } );
+    </script>
+
+</div>
+
+</body>
+</html>
