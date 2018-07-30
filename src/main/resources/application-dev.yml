@@ -46,5 +46,6 @@ mybatis:
 #    type-handlers-package: com.example.typehandler
     configuration:
         map-underscore-to-camel-case: true
+        # 自动将数据库中 a_b 映射成驼峰 aB mapUnderscoreToCamelCase: true
         default-fetch-size: 100
         default-statement-timeout: 30

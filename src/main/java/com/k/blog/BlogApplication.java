@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 
 @SpringBootApplication
 //扫描mapper包下
-@MapperScan("com.k.blog.mapper")
+@MapperScan({"com.k.blog.dao","com.k.blog.mapper"})
 //开启事务支持
 @EnableTransactionManagement
 public class BlogApplication {
